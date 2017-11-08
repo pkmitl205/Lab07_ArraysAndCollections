@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
 
 namespace ConsoleAppArray
@@ -10,11 +11,9 @@ namespace ConsoleAppArray
 
             string[] array1 = { "January", "February", "March", "April", "May", "June",
                                 "July", "August", "September", "October", "November",
-                                "December"
-                              };
+                                "December"};
 
-            string value3 = Array.Find(array1,
-                element => element.Length <= 3);
+            string value3 = Array.Find(array1, element => element.Length >= 10);
 
             Console.WriteLine(value3);
 
