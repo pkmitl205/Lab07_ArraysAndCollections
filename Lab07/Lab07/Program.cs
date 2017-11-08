@@ -5,73 +5,59 @@ namespace ConsoleAppArray
 {
     class Program
     {
-
         static void Main(string[] args)
         {
-
-            ArrayList al = new ArrayList();
-
-            Console.WriteLine("");
-            Console.WriteLine("===============|| Please Enter GPS ||================");
-            for (int i = 0; i <= 7; i++)
+            int [] arr = new int[]{0,3,3,6,1,4,6,2,5,0,3,5};
+            
+               
+            try
             {
-                Console.Write("GPS Semester {0} : ", i + 1);
+                    int var1, var2, var3;
 
-                try
-                {
-                    double val1 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("Please Enter Day : ");
+                    var1 = Convert.ToInt16(Console.ReadLine());
+                        try
+                        {
+                            if (var1 > 0 && var1 <= 31)
+                                var1 = var1;
+                            else
+                                throw (new Exception("Error!!!! invalid Day"));
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
 
+                    Console.Write("Please Enter Month : ");
                     try
                     {
-                        if (val1 > 0.0 && val1 <= 4.0)
-                            val1 = al.Add(val1);
-                        else
-                            throw (new Exception("Error!!!! invalid GPA"));
-                    }
+                        var2 = Convert.ToInt16(Console.ReadLine()) - 1;
+                                try
+                                {
+                                    if (var2 > 0 && var2 <= 12)
+                                        var2 = var2;
+                                    else
+                                        throw (new Exception("Error!!!! invalid Month"));
+                                }
+                                catch (Exception e)
+                                {
+                                    Console.WriteLine(e.Message);
+                                }
 
-                    catch (Exception e)
+                        var3 = (var1 + arr[var2] - 1) % 7;
+
+                        string[] str = new string[] { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+
+                        Console.WriteLine("=======================================");
+                        Console.WriteLine(" {0} / {1} / 2560 is <{2}> ", var1, var2, str[var3]);
+                        Console.WriteLine("=======================================");
+                    }
+                    catch (IndexOutOfRangeException e)
                     {
                         Console.WriteLine(e.Message);
                     }
-                }
-                catch (FormatException e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-
             }
-
-            string str = " ";
-            foreach (double item in al)
-            {
-                str = str + item + Environment.NewLine;
-            }
-
-            Console.WriteLine("");
-            Console.WriteLine("==================|| Show GPS ||===================");
-            for (int i = 0; i <= 7; i++)
-            {
-                try
-                {
-                    Console.WriteLine("GPS : Semester {0} = {1}", i + 1, al[i]);
-                }
-                catch (ArgumentException e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-
-            }
-
-            Console.WriteLine("");
-            Console.WriteLine("==================|| Show GPA ||==================");
-            double sum = 0;
-            for (int i = 0; i < 7; i++)
-                sum = sum + Convert.ToDouble(al[i]);
-            try
-            {
-                Console.WriteLine("GPA : {0}", sum / 8);
-            }
-            catch (ArgumentException e)
+            catch (FormatException e)
             {
                 Console.WriteLine(e.Message);
             }
