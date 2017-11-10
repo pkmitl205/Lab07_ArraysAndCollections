@@ -253,10 +253,10 @@ namespace ConsoleAppArray
         };
 
             string[] array2 = Array.FindAll(array1,
-                element => element.EndsWith("land",
+                element => element.EndsWith("stan",
               StringComparison.Ordinal));
 
-            Console.WriteLine("Fine 'land' ");
+            Console.WriteLine("Fine 'stan' ");
             Console.WriteLine("===============================================");
             Console.WriteLine((string.Join(",", array2)));
             Console.ReadLine();
