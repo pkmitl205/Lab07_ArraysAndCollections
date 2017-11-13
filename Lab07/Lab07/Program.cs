@@ -14,7 +14,7 @@ namespace ConsoleAppArray
 
             string[] ArrayC = new string[12];
             ArrayC = Array.FindAll(ArrayA,
-            element => element.EndsWith("ber",
+            element => element.EndsWith("ry",
             StringComparison.Ordinal));
 
             // copy by operator =
