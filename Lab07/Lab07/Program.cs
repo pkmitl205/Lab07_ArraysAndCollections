@@ -252,7 +252,7 @@ namespace ConsoleAppArray
             string[] ArrayB = new string[] { };
 
             string[] ArrayC = Array.FindAll(ArrayA,
-              element => element.EndsWith("land",
+              element => element.EndsWith("stan",
               StringComparison.Ordinal));
 
             // copy by operator =
