@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Linq;
 
 namespace ConsoleAppArray
@@ -12,12 +14,12 @@ namespace ConsoleAppArray
                                 "December"};
 
             // C# program that uses LINQ
-            var sortAscending = from var1 in array1
-                                orderby var1
-                                select var1;
+            var sortDescending = from var2 in array1
+                                 orderby var2 descending
+                                 select var2;
 
-            Console.WriteLine("------String sort ascending----------");
-            foreach (string c in sortAscending)
+            Console.WriteLine("------String sort descending----------");
+            foreach (string c in sortDescending)
                 Console.WriteLine(c);
 
             // wait
