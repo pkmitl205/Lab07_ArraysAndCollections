@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 
 namespace StackDemo
@@ -21,12 +22,8 @@ namespace StackDemo
             {
                 Console.WriteLine(s);
             }
-            Console.WriteLine("The element RED contain in the stack "
-+ stack1.Contains("RED"));
-            Console.WriteLine("The element YELLOW contain in the stack "
-+ stack1.Contains("YELLOW"));
-            Console.WriteLine("The element BLACK contain in the stack "
-+ stack1.Contains("BLACK"));
+            stack1.Clear();
+            Console.WriteLine("After apply the clear method the elements in thestack are: " + stack1.Count);
             Console.ReadLine();
         }
     }
