@@ -8,50 +8,93 @@ namespace DictionaryDemo
     {
         static void Main(string[] args)
         {
-            Dictionary<string, string> dict1 = new Dictionary<string, string>();
-            dict1.Add("txt", "Notepad.exe");
-            dict1.Add("bmp", "paint.exe");
-            dict1.Add("rtf", "wordpad.exe");
-            dict1.Add("pdf", "acrobat.exe");
-
+            Dictionary<string, string> country = new Dictionary<string, string>();
+            country.Add("AF", "Afghanistan");
+            country.Add("AL", "Albania");
+            country.Add("AS", "American Samoa");
+            country.Add("AD", "Andorra");
+            country.Add("AM", "Armenia");
+            country.Add("AW", "Aruba");
+            country.Add("AU", "Australia");
+            country.Add("AT", "Austria");
+            country.Add("AZ", "Azerbaijan");
 
 
             Console.Write("Please Enter Text : ");
 
             string var = Console.ReadLine();
-            if (var == "txt")
+            if (var == "AF")
             {
-                if (dict1.ContainsKey("txt"))
+                if (country.ContainsKey("AF"))
                 {
-                    string value = dict1["txt"];
+                    string value = country["AF"];
                     Console.WriteLine(value);
                 }
             }
-            if (var == "bmp")
+            if (var == "AL")
             {
-                if (dict1.ContainsKey("bmp"))
+                if (country.ContainsKey("AL"))
                 {
-                    string value = dict1["bmp"];
+                    string value = country["AL"];
                     Console.WriteLine(value);
                 }
             }
-            if (var == "rtf")
+            if (var == "AS")
             {
-                if (dict1.ContainsKey("rtf"))
+                if (country.ContainsKey("AS"))
                 {
-                    string value = dict1["rtf"];
+                    string value = country["AF"];
                     Console.WriteLine(value);
                 }
             }
-            if (var == "pdf")
+            if (var == "AD")
             {
-                if (dict1.ContainsKey("pdf"))
+                if (country.ContainsKey("AD"))
                 {
-                    string value = dict1["pdf"];
+                    string value = country["AD"];
                     Console.WriteLine(value);
                 }
             }
-
+            if (var == "AM")
+            {
+                if (country.ContainsKey("AM"))
+                {
+                    string value = country["AM"];
+                    Console.WriteLine(value);
+                }
+            }
+            if (var == "AW")
+            {
+                if (country.ContainsKey("AW"))
+                {
+                    string value = country["AW"];
+                    Console.WriteLine(value);
+                }
+            }
+            if (var == "AU")
+            {
+                if (country.ContainsKey("AU"))
+                {
+                    string value = country["AU"];
+                    Console.WriteLine(value);
+                }
+            }
+            if (var == "AT")
+            {
+                if (country.ContainsKey("AT"))
+                {
+                    string value = country["AT"];
+                    Console.WriteLine(value);
+                }
+            }
+            if (var == "AZ")
+            {
+                if (country.ContainsKey("AZ"))
+                {
+                    string value = country["AZ"];
+                    Console.WriteLine(value);
+                }
+            }
             Console.ReadLine();
         }
     }
